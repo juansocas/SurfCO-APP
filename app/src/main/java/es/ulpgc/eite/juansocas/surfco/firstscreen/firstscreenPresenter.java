@@ -2,11 +2,14 @@ package es.ulpgc.eite.juansocas.surfco.firstscreen;
 
 
 
+import android.util.Log;
+
 import java.lang.ref.WeakReference;
 
 import es.ulpgc.eite.juansocas.surfco.app.CatalogMediator;
 
 public class firstscreenPresenter implements  firstscreenContract.Presenter{
+    private static String TAG = "SurfCO.firstscreenPresenter";
 
     private WeakReference<firstscreenContract.View> view;
     private  firstscreenState state;
@@ -42,6 +45,59 @@ public class firstscreenPresenter implements  firstscreenContract.Presenter{
 
     @Override
     public void fetchFirstScreenData() {
+        // TODO: add code if is necessary
 
     }
+
+    @Override
+    public void onResume() {
+        Log.e(TAG, "onResume()");
+        // TODO: add code if is necessary
+    }
+
+
+
+
+    @Override
+    public void onStart() {
+        Log.e(TAG, "onStart()");
+
+        // initialize the state
+        state = new firstscreenState();
+
+        // TODO: add code if is necessary
+
+    }
+
+    @Override
+    public void onRestart() {
+
+    }
+
+    @Override
+    public void onPause() {
+        Log.e(TAG, "onPause()");
+
+        // TODO: add code if is necessary
+    }
+
+    @Override
+    public void onDestroy() {
+        Log.e(TAG, "onDestroy()");
+
+        // TODO: add code if is necessary
+    }
+
+    @Override
+    public void onLoginButtonPressed(){
+
+
+    }
+
+    @Override
+    public void onSingUpButtonPressed() {
+
+    }
+
+
 }
