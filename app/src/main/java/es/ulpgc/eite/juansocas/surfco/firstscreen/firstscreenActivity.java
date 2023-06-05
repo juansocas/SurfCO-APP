@@ -1,7 +1,12 @@
 package es.ulpgc.eite.juansocas.surfco.firstscreen;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.nfc.Tag;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,10 +22,19 @@ public class firstscreenActivity extends AppCompatActivity implements firstscree
 
     firstscreenContract.Presenter presenter;
     private  firstscreenAdapter listAdapter;
+    Button login_button;
+    Button singup_button;
+    //@SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_firtscreen);
+        login_button = findViewById(R.id.login_button);
+        singup_button = findViewById(R.id.singup_button);
+
+
+
+
 
 
         //Toolbar toolbar = findViewById(R.id.toolbar);
@@ -79,6 +93,11 @@ public class firstscreenActivity extends AppCompatActivity implements firstscree
         Intent intent = new Intent(this, SingUpScreenActivity.class);
         startActivity(intent);
 
+    }
+    @Override
+    public void onStart(){
+        super.onStart();
+        presenter.onStart();
     }
 
     @Override

@@ -3,12 +3,18 @@ package es.ulpgc.eite.juansocas.surfco.app;
 
 
 import es.ulpgc.eite.juansocas.surfco.firstscreen.firstscreenState;
+import es.ulpgc.eite.juansocas.surfco.loginscreen.loginscreenState;
+import es.ulpgc.eite.juansocas.surfco.singupscreen.SingUpScreenState;
 
 public class CatalogMediator {
 
     private static CatalogMediator INSTANCE;
 
-    private es.ulpgc.eite.juansocas.surfco.firstscreen.firstscreenState firstscreenState = new firstscreenState();
+    private firstscreenState firstscreenState = new firstscreenState();
+
+    private loginscreenState loginscreenstate = new loginscreenState();
+
+    private SingUpScreenState singUpScreenState = new SingUpScreenState();
 
 
     private CatalogMediator() {
@@ -30,5 +36,12 @@ public class CatalogMediator {
 
     public firstscreenState getFirstscreenState(){
         return firstscreenState;
+    }
+    public loginscreenState getLoginScreenState(){
+        return loginscreenstate;
+    }
+
+    public SingUpScreenState getSingUpScreenState() {
+        return singUpScreenState;
     }
 }

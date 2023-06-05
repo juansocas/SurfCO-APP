@@ -52,6 +52,7 @@ public class firstscreenPresenter implements  firstscreenContract.Presenter{
     @Override
     public void onResume() {
         Log.e(TAG, "onResume()");
+
         // TODO: add code if is necessary
     }
 
@@ -71,6 +72,9 @@ public class firstscreenPresenter implements  firstscreenContract.Presenter{
 
     @Override
     public void onRestart() {
+        Log.e(TAG, "onRestart()");
+
+        // TODO: add code if is necessary
 
     }
 
@@ -90,12 +94,15 @@ public class firstscreenPresenter implements  firstscreenContract.Presenter{
 
     @Override
     public void onLoginButtonPressed(){
+        Log.e(TAG,"onLoginButtonPressed");
+        view.get().navigateToLoginScreen();
 
 
     }
 
     @Override
     public void onSingUpButtonPressed() {
+        view.get().onSingUpButtonPressed();
 
     }
 
