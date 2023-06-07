@@ -24,6 +24,7 @@
         </activity>
         <activity android:name=".loginscreen.loginscreenActivity"></activity>
         <activity android:name=".singupscreen.SingUpScreenActivity" />
+        <activity android:name=".menuscreen.MenuScreenActivity"/>
     </application>
 
 </manifest>
