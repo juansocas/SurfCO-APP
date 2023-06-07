@@ -92,19 +92,8 @@ public class firstscreenPresenter implements  firstscreenContract.Presenter{
         // TODO: add code if is necessary
     }
 
-    @Override
-    public void onLoginButtonPressed(){
-        Log.e(TAG,"onLoginButtonPressed");
-        view.get().navigateToLoginScreen();
 
 
-    }
-
-    @Override
-    public void onSingUpButtonPressed() {
-        view.get().onSingUpButtonPressed();
-
-    }
 
 
 }

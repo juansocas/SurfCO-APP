@@ -1,6 +1,7 @@
 package es.ulpgc.eite.juansocas.surfco.loginscreen;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -60,6 +61,10 @@ public class loginscreenActivity extends AppCompatActivity implements loginscree
     public void onDestroy(){
         super.onDestroy();
         presenter.onDestroy();
+
+    }
+    public void onBackPressed(View view){
+        finish();
 
     }
 }

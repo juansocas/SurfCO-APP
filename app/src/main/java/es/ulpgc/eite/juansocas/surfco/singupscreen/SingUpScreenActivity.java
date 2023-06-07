@@ -1,13 +1,13 @@
 package es.ulpgc.eite.juansocas.surfco.singupscreen;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import es.ulpgc.eite.juansocas.surfco.R;
 import es.ulpgc.eite.juansocas.surfco.app.CatalogMediator;
-import es.ulpgc.eite.juansocas.surfco.firstscreen.firstscreenContract;
-import es.ulpgc.eite.juansocas.surfco.firstscreen.firstscreenScreen;
+
 
 public class SingUpScreenActivity extends AppCompatActivity implements SingUpScreenContract.View  {
 
@@ -61,5 +61,9 @@ public class SingUpScreenActivity extends AppCompatActivity implements SingUpScr
         presenter.onDestroy();
 
     }
+    public void onBackPressed(View view){
+        finish();
+    }
+
 
 }

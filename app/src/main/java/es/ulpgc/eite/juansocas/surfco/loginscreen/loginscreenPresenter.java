@@ -60,6 +60,7 @@ public class loginscreenPresenter implements loginscreenContract.Presenter{
 
     @Override
     public void onRestart() {
+        Log.e(TAG, "onRestart()");
         // TODO: add code if is necessary
 
     }

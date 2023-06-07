@@ -1,18 +1,14 @@
 package es.ulpgc.eite.juansocas.surfco.firstscreen;
 
+import android.view.View;
+
 import java.lang.ref.WeakReference;
 
 public interface firstscreenContract {
     interface View{
         void injectPresenter(Presenter presenter);
-        void navigateToLoginScreen();
-
-        void navigateToSingupScreen();
-
-
-        void onLoginButtonPressed();
-
-        void onSingUpButtonPressed();
+        void navigateToLoginScreen(android.view.View view);
+        void navigateToSingupScreen(android.view.View view);
     }
     interface Presenter{
         void injectView(WeakReference<View> view);
@@ -23,8 +19,7 @@ public interface firstscreenContract {
         void onRestart();
         void onDestroy();
         void onPause();
-        void onLoginButtonPressed();
-        void onSingUpButtonPressed();
+
 
     }
     interface Model{
