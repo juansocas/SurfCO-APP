@@ -30,30 +30,33 @@ public class SurfandCoRepository implements RepositoryContract{
 
     public static String TAG = SurfandCoRepository.class.getSimpleName();
 
-    public static final String DB_FILE = "BaseSURFandCOcatalog.db";
-    public static final String JSON_FILE = "BaseSURFandCOcatalog.json";
-    public static final String JSON_ROOT = "categories";
+    public static final String DB_FILE = "usuarios.db";
+    public static final String JSON_FILE = "usuarios.json";
+    public static final String JSON_ROOT = "usuarios";
 
     private static SurfandCoRepository INSTANCE;
 
     private SurfandCODatabase database;
     private Context context;
 
+    public static RepositoryContract getInstance(Context context){
+        if (INSTANCE == null){
+            INSTANCE = new SurfandCoRepository(context);
+
+        }
+        return INSTANCE;
+
+    }
+
     public SurfandCoRepository(Context context) {
         this.context = context;
         database = Room.databaseBuilder(context,SurfandCODatabase.class,DB_FILE).build();
     }
 
-    public static RepositoryContract getInstance(Context context){
-        if (INSTANCE == null){
-            INSTANCE = new SurfandCoRepository(context);
-        }
-        return INSTANCE;
 
-    }
-/*
+
     @Override
-    public void loadCatalog(final boolean clearFirst, final FetchCatalogDataCallback callback){
+    public void loadUsers(final boolean clearFirst, final FetchUsersDataCallback callback){
         AsyncTask.execute(new Runnable() {
             @Override
             public void run() {
@@ -61,11 +64,11 @@ public class SurfandCoRepository implements RepositoryContract{
                     database.clearAllTables();
                 }
                 boolean error= false;
-                if (getUserDao().loadUsers().size() == 0){
+                if (getUserDao().getUsers().size() == 0){
                     error =! loadSURFandCOCatalogFromJSON(loadJSONFromAsset());
                 }
                 if (callback != null){
-                    callback.onCatalogDataFetched(error);
+                    callback.onUsersDataFetched(error);
                 }
             }
         });
@@ -73,10 +76,74 @@ public class SurfandCoRepository implements RepositoryContract{
     }
 
 
+
+/*
+    public void insertUser(User user, final OnUserInserted callback){
+        AsyncTask.execute(new Runnable() {
+            @Override
+            public void run() {
+                getUserDao().insertarUser(user);
+                if (callback != null){
+                    callback.onUserInserted(user);
+                }
+            }
+        });
+
+    }
+
  */
+public void insertUser(User user, final OnUsersUpdated callback){
+    AsyncTask.execute(new Runnable() {
+        @Override
+        public void run() {
+            getUserDao().insertarUser(user);
+            List<User> usuarios = getUserDao().getUsers();
+            if (callback != null){
+                callback.onUsersUpdated(usuarios);
+            }
+        }
+    });
 
+}
 
+    public void getUsers( final OnUsergeted callback){
+        AsyncTask.execute(new Runnable() {
+            @Override
+            public void run() {
+                List<User> usuarios = getUserDao().getUsers();
 
+                if (callback != null){
+                    callback.onUsergeted(usuarios);
+
+                }
+            }
+        });
+    }
+
+    @Override
+    public void getUsersList(final GetUsersListCallback callback) {
+    AsyncTask.execute(new Runnable() {
+        @Override
+        public void run() {
+            if(callback !=null){
+                callback.setUsersList(getUserDao().getUsers());
+            }
+        }
+    });
+
+    }
+
+    public void getgetAllPicos(final  OnPicosgetted callback){
+        AsyncTask.execute(new Runnable() {
+            @Override
+            public void run() {
+                List<Picos> picos = getPicosDao().getAllPicos();
+                if(callback !=null){
+                    callback.onPicosgetted(picos);
+                }
+            }
+        });
+    }
 
 
 
@@ -109,8 +176,9 @@ public class SurfandCoRepository implements RepositoryContract{
                 final List<User> users = Arrays.asList(gson.fromJson(jsonArray.toString(), User[].class));
 
                 for(User user : users){
-                    //getUserDAO().
+                    getUserDao().insertarUser(user);
                 }
+                return true;
 
             }
         }catch (JSONException error){
@@ -122,13 +190,12 @@ public class SurfandCoRepository implements RepositoryContract{
 
 
     private String loadJSONFromAsset(){
-        //Log.e(TAG, "loadJSONFromAsset()");
+        Log.e(TAG, "loadJSONFromAsset()");
 
         String json = null;
 
         try {
-
-            InputStream is = context.getAssets().open(JSON_FILE);
+            InputStream is = context.getAssets().open("usuarios.json");
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);
@@ -138,9 +205,11 @@ public class SurfandCoRepository implements RepositoryContract{
         } catch (IOException error) {
             Log.e(TAG, "error: " + error);
         }
-
+        Log.e(TAG, "PASAAAA()");
         return json;
+
     }
+
 
 
 }

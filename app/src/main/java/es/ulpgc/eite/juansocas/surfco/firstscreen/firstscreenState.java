@@ -1,4 +1,4 @@
 package es.ulpgc.eite.juansocas.surfco.firstscreen;
 
-public class firstscreenState {
+public class firstscreenState extends firstscreenViewModel{
 }

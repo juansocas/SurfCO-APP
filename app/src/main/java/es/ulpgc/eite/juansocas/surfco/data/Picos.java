@@ -7,24 +7,12 @@ import androidx.room.PrimaryKey;
 
 import static androidx.room.ForeignKey.CASCADE;
 
-@Entity(
-        tableName = "picos"
-        /*
-        foreignKeys = @ForeignKey(
-                entity = User.class,
-                parentColumns = "id",
-                childColumns = "user_id",
-                onDelete = CASCADE
-        )
-
-         */
-
-
-)
+@Entity(tableName = "olas")
 
 public class Picos {
 
         @PrimaryKey
+        @ColumnInfo(name = "id")
         public int id;
 
         public String nombre;
@@ -37,4 +25,45 @@ public class Picos {
 
         //@ColumnInfo(name = "user_id")
         //private int user_id;
+
+
+        public int getId() {
+                return id;
+        }
+
+        public void setId(int id) {
+                this.id = id;
+        }
+
+        public String getNombre() {
+                return nombre;
+        }
+
+        public void setNombre(String nombre) {
+                this.nombre = nombre;
+        }
+
+        public String getImagen() {
+                return imagen;
+        }
+
+        public void setImagen(String imagen) {
+                this.imagen = imagen;
+        }
+
+        public String getInfo() {
+                return info;
+        }
+
+        public void setInfo(String info) {
+                this.info = info;
+        }
+
+        public String getIsla() {
+                return isla;
+        }
+
+        public void setIsla(String isla) {
+                this.isla = isla;
+        }
 }

@@ -30,6 +30,8 @@ public class firstscreenActivity extends AppCompatActivity implements firstscree
         login_button1 = findViewById(R.id.login_button);
         singup_button1 = findViewById(R.id.singup_button);
 
+        //presenter.fetchFirstScreenData();
+
 
 
 

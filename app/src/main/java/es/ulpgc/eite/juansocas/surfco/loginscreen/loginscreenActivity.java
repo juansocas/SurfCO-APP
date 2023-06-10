@@ -8,9 +8,19 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
+
+import java.util.List;
 
 import es.ulpgc.eite.juansocas.surfco.R;
 import es.ulpgc.eite.juansocas.surfco.app.CatalogMediator;
+import es.ulpgc.eite.juansocas.surfco.data.Picos;
+import es.ulpgc.eite.juansocas.surfco.data.RepositoryContract;
+import es.ulpgc.eite.juansocas.surfco.data.SurfandCoRepository;
+import es.ulpgc.eite.juansocas.surfco.data.User;
+import es.ulpgc.eite.juansocas.surfco.database.PicosDAO;
+import es.ulpgc.eite.juansocas.surfco.database.SurfandCODatabase;
+import es.ulpgc.eite.juansocas.surfco.database.UserDAO;
 import es.ulpgc.eite.juansocas.surfco.menuscreen.MenuScreenActivity;
 
 public class loginscreenActivity extends AppCompatActivity implements loginscreenContract.View {
@@ -18,6 +28,7 @@ public class loginscreenActivity extends AppCompatActivity implements loginscree
     loginscreenContract.Presenter presenter;
     private loginscreenAdapter listAdapter;
     EditText correo_introducida, password_introducida;
+    Button loginbutton;
     String correo, password;
 
     @Override
@@ -26,6 +37,7 @@ public class loginscreenActivity extends AppCompatActivity implements loginscree
         setContentView(R.layout.activity_login);
         correo_introducida = findViewById(R.id.email_text);
         password_introducida = findViewById(R.id.password_text);
+        loginbutton = findViewById(R.id.Log_in_button);
 
 
         if(savedInstanceState == null){
@@ -40,7 +52,15 @@ public class loginscreenActivity extends AppCompatActivity implements loginscree
             presenter.onRestart();
         }
 
-        Button loginbutton = findViewById(R.id.Log_in_button);
+
+        //CARGA EL JSON
+        presenter.fetchLoginScreenData();
+
+        //presenter.insertarUSER_PRESENTER();
+
+
+
+
         loginbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,13 +68,10 @@ public class loginscreenActivity extends AppCompatActivity implements loginscree
                     correo = correo_introducida.getText().toString();
                     password = password_introducida.getText().toString();
 
-                    if(1==1){
-                        Toast.makeText(loginscreenActivity.this,"Los valores son correctos",Toast.LENGTH_LONG).show();
-                        navigateToMenuScreen(view);
+                    presenter.login(correo, password);
 
-                    }else {
-                        Toast.makeText(loginscreenActivity.this,"Los valores son incorrectos",Toast.LENGTH_LONG).show();
-                    }
+
+                    //Toast.makeText(loginscreenActivity.this,"Los valores son incorrectos",Toast.LENGTH_LONG).show();
 
                 }catch (Exception e){
                     Toast.makeText(loginscreenActivity.this,"error",Toast.LENGTH_LONG).show();
@@ -80,6 +97,12 @@ public class loginscreenActivity extends AppCompatActivity implements loginscree
 
     }
 
+    @Override
+    public void onLoginIncorret(){
+        correo_introducida.setText("");
+        password_introducida.setText("");
+    }
+
 
     @Override
     public void onResume(){
@@ -103,4 +126,5 @@ public class loginscreenActivity extends AppCompatActivity implements loginscree
         finish();
 
     }
+
 }

@@ -11,11 +11,12 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
+
 @Entity(tableName = "usuario")
 public class User {
 
     @PrimaryKey
-    @ColumnInfo(name = "ID")
+    @ColumnInfo(name = "id")
     public int id;
 
     //@ColumnInfo(name = "Nombre")
@@ -32,13 +33,14 @@ public class User {
 
     //@ColumnInfo(name = "Informacion")
     public String Info;
-    /*
+/*
     @Ignore
     @SerializedName("Picos")
     @ColumnInfo(name = "Picos")
     public List<Picos> picos;
 
-     */
+ */
+
 
     public User(){
 

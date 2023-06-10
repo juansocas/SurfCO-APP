@@ -5,6 +5,8 @@ import androidx.fragment.app.FragmentActivity;
 import java.lang.ref.WeakReference;
 
 import es.ulpgc.eite.juansocas.surfco.app.CatalogMediator;
+import es.ulpgc.eite.juansocas.surfco.data.RepositoryContract;
+import es.ulpgc.eite.juansocas.surfco.data.SurfandCoRepository;
 
 public class SingUpScreenScreen {
 
@@ -15,12 +17,17 @@ public class SingUpScreenScreen {
 
         CatalogMediator mediator = CatalogMediator.getInstance();
         ///FALTA
-        //RepositoryContract repository = CatalogRepository.getInstance(context.get());
+        RepositoryContract repository = SurfandCoRepository.getInstance(context.get());
+
+        SingUpScreenModel model = new SingUpScreenModel(repository);
 
         SingUpScreenContract.Presenter presenter = new SingUpScreenPresenter(mediator);
+        presenter.injectView(new WeakReference<>(view));
+        presenter.injectModel(model);
 
 
         view.injectPresenter(presenter);
+        presenter.injectModel(model);
 
     }
 

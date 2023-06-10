@@ -1,0 +1,45 @@
+{
+  "Users": [
+    {
+      "id": 2,
+      "nombre": "Juan Socas",
+      "email": "juan.socas101@alu.ulpgc.es",
+      "telefono": 12345,
+      "password": "juansocas",
+      "Info": "Juan Socas es un surfista de 21 años local de la isla. Quedo 4º en el campeonato jovenes promesas realizado en la playa de La garita.\n"
+    },
+    {
+      "id": 3,
+      "nombre": "Franito",
+      "email": "Franito@surfco.com",
+      "telefono": 12345,
+      "password": "franito",
+      "Info": "Farinto es un local de la lanzarote que entrena a la nueva cantera del surf en Lanzarote"
+    },
+    {
+      "id": 4,
+      "nombre": "Luis Diaz",
+      "email": "luisdiaz@surfco.com",
+      "telefono": 12345,
+      "password": "luisdiaz",
+      "Info": "es Luis diaz"
+    },
+    {
+      "id": 5,
+      "nombre": "Kail",
+      "email": "kail@surfco.com",
+      "telefono": 12345,
+      "password": "kail",
+      "Info": "es kail"
+    },
+    {
+      "id": 6,
+      "nombre": "Lewis",
+      "email": "lewis@surfco.com",
+      "telefono": 12345,
+      "password": "lexis",
+      "Info": "es lewis"
+    }
+
+  ]
+}

@@ -17,25 +17,32 @@ public interface UserDAO {
 
 
     //TODO: INSERTAR NUEVO USUARIO
-    /*
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertarUser(User user);
 
-     */
-/*
+
+
     @Update
     void updateUser(User user);
 
+    @Query("SELECT * FROM usuario")
+    List<User> getUsers();
+
+
+
+
+
+
+
+
+
+/*
+
+    @Query("SELECT * FROM Usuarios INNER JOIN picos On user_id = picos.user_id WHERE picos.id = :picodd");
+    List<User> getUserByPicoId(int picodd);
+
  */
-
-
-
-
-
-
-
-    //@Query("SELECT * FROM Usuarios INNER JOIN picos On user_id = picos.user_id WHERE picos.id = :picodd");
-    //List<User> getUserByPicoId(int picodd);
 
 
 

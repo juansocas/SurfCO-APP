@@ -7,6 +7,7 @@ import android.util.Log;
 import java.lang.ref.WeakReference;
 
 import es.ulpgc.eite.juansocas.surfco.app.CatalogMediator;
+import es.ulpgc.eite.juansocas.surfco.data.RepositoryContract;
 
 public class firstscreenPresenter implements  firstscreenContract.Presenter{
     private static String TAG = "SurfCO.firstscreenPresenter";
