@@ -150,6 +150,7 @@ public void insertUser(User user, final OnUsersUpdated callback){
 
     public void updateUser(final User user){
 
+
     }
 
 
@@ -177,6 +178,12 @@ public void insertUser(User user, final OnUsersUpdated callback){
 
                 for(User user : users){
                     getUserDao().insertarUser(user);
+
+
+                }
+                for(int i = 0; i<users.size(); i++){
+                    Log.e(TAG, "Los Users son los siguientes con email: "+ users.get(i).getEmail() + " y de password " + users.get(i).getPassword());
+
                 }
                 return true;
 
@@ -184,6 +191,7 @@ public void insertUser(User user, final OnUsersUpdated callback){
         }catch (JSONException error){
             Log.e(TAG, "error: " + error);
         }
+        Log.e(TAG, "PASAAAA()");
 
         return false;
     }
@@ -205,7 +213,7 @@ public void insertUser(User user, final OnUsersUpdated callback){
         } catch (IOException error) {
             Log.e(TAG, "error: " + error);
         }
-        Log.e(TAG, "PASAAAA()");
+
         return json;
 
     }

@@ -1,9 +1,9 @@
 {
-  "Users": [
+  "usuarios": [
     {
       "id": 2,
       "nombre": "Juan Socas",
-      "email": "juan.socas101@alu.ulpgc.es",
+      "email": "juan.com",
       "telefono": 12345,
       "password": "juansocas",
       "Info": "Juan Socas es un surfista de 21 años local de la isla. Quedo 4º en el campeonato jovenes promesas realizado en la playa de La garita.\n"

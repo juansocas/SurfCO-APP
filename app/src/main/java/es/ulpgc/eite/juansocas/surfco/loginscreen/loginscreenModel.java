@@ -18,16 +18,23 @@ public class loginscreenModel implements loginscreenContract.Model{
         this.repository = repo;
     }
 
-    public boolean verificarcredenciales(String correo, String password){
+    public boolean verificarcredenciales(String correo, String password, RepositoryContract.GetUsersListCallback callback){
+
+
+        Log.e(TAG,correo);
+        Log.e(TAG,password);
         repository.getUsers(new RepositoryContract.OnUsergeted() {
             @Override
             public void onUsergeted(List<User> users) {
-                for (int i = 0; i< users.size();i++){
-                    if(correo == users.get(i).email || password == users.get(i).password){
+                callback.setUsersList(users);
+
+                for (int i = 0; i < users.size();i++){
+                    Log.e(TAG,"Usaurios: " + users.get(i).getEmail() +" " + users.get(i).getPassword());
+                    if (correo.equals(users.get(i).getEmail()) && password.equals(users.get(i).getPassword())){
                         verificacion = true;
-                    } else {
-                        verificacion = false;
+                        break;
                     }
+
                 }
 
             }
@@ -64,7 +71,7 @@ public class loginscreenModel implements loginscreenContract.Model{
             }
         });
 
-        
+
 
     }
 

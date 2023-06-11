@@ -22,6 +22,9 @@ public interface RepositoryContract {
 
 
  */
+    interface VerificacionCredencialesCallback{
+
+   }
 
     interface FetchUsersDataCallback{
         void onUsersDataFetched(boolean error);

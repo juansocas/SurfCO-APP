@@ -56,6 +56,7 @@ public class loginscreenActivity extends AppCompatActivity implements loginscree
         //CARGA EL JSON
         presenter.fetchLoginScreenData();
 
+        //INSERTAR MANUELMENTE UN USER
         //presenter.insertarUSER_PRESENTER();
 
 
@@ -67,12 +68,8 @@ public class loginscreenActivity extends AppCompatActivity implements loginscree
                 try{
                     correo = correo_introducida.getText().toString();
                     password = password_introducida.getText().toString();
-
+                    //VERIFICAMOS SI ESTAN DENTRO DE LA BD
                     presenter.login(correo, password);
-
-
-                    //Toast.makeText(loginscreenActivity.this,"Los valores son incorrectos",Toast.LENGTH_LONG).show();
-
                 }catch (Exception e){
                     Toast.makeText(loginscreenActivity.this,"error",Toast.LENGTH_LONG).show();
                 }
@@ -91,14 +88,13 @@ public class loginscreenActivity extends AppCompatActivity implements loginscree
     @Override
     public void navigateToMenuScreen(View view){
         Intent intent = new Intent(this, MenuScreenActivity.class);
-        intent.addCategory(correo);
-        intent.addCategory(password);
         startActivity(intent);
 
     }
 
     @Override
     public void onLoginIncorret(){
+        Toast.makeText(loginscreenActivity.this,"Los valores introducidos son incorrectos",Toast.LENGTH_LONG).show();
         correo_introducida.setText("");
         password_introducida.setText("");
     }

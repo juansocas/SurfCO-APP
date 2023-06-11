@@ -32,7 +32,7 @@ public interface loginscreenContract {
 
     }
     interface Model{
-        boolean verificarcredenciales(String correo,String password);
+        boolean verificarcredenciales(String correo, String password, RepositoryContract.GetUsersListCallback callback);
         void insertarUser_MODEL(User user1, RepositoryContract.OnUsersUpdated callback);
 
         void fetchUsersListData_MODEL(RepositoryContract.GetUsersListCallback callback);

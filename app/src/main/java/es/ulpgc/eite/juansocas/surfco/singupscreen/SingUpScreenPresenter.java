@@ -1,13 +1,12 @@
 package es.ulpgc.eite.juansocas.surfco.singupscreen;
 
 import android.util.Log;
+import android.widget.Spinner;
 
 import java.lang.ref.WeakReference;
 
 import es.ulpgc.eite.juansocas.surfco.app.CatalogMediator;
-import es.ulpgc.eite.juansocas.surfco.firstscreen.firstscreenContract;
-import es.ulpgc.eite.juansocas.surfco.firstscreen.firstscreenState;
-import es.ulpgc.eite.juansocas.surfco.loginscreen.loginscreenContract;
+import es.ulpgc.eite.juansocas.surfco.data.User;
 
 public class SingUpScreenPresenter implements SingUpScreenContract.Presenter {
 
@@ -78,6 +77,20 @@ public class SingUpScreenPresenter implements SingUpScreenContract.Presenter {
     @Override
     public void fetchLoginScreenData() {
         // TODO: add code if is necessary
+
+    }
+
+    @Override
+    public void insertarNuevoUser(String firstNameText, String secondNameText, String emailText, String passwordText, String descripcionText, int telefonoText, Spinner ola){
+        User user = new User();
+        user.setNombre( firstNameText +" "+ secondNameText);
+        user.setEmail(emailText);
+        user.setPassword(passwordText);
+        user.setInfo(descripcionText);
+        user.setTelefono(telefonoText);
+
+
+
 
     }
 }

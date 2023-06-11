@@ -98,9 +98,14 @@ public class loginscreenPresenter implements loginscreenContract.Presenter{
 
     @Override
     public void login(String correo, String password){
-        boolean comprueba = model.verificarcredenciales(correo,password);
+        boolean comprueba = model.verificarcredenciales(correo, password, new RepositoryContract.GetUsersListCallback() {
+            @Override
+            public void setUsersList(List<User> users) {
+
+            }
+        });
+        Log.e(TAG,"Es " + comprueba);
        if( comprueba == true){
-           Log.e(TAG,"Es " + comprueba);
 
            //view.get().navigateToMenuScreen();
 
@@ -111,6 +116,7 @@ public class loginscreenPresenter implements loginscreenContract.Presenter{
     }
     @Override
     public void insertarUSER_PRESENTER (){
+
         User user = new User();
         user.setId(1);
         user.setNombre("Juan");
