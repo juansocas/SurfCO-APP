@@ -57,6 +57,7 @@ public class SingUpScreenActivity extends AppCompatActivity implements SingUpScr
         listapicos = findViewById(R.id.spinner);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item);
+        adapter.addAll();
 
         listapicos.setAdapter(adapter);
         listapicos.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {

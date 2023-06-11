@@ -19,6 +19,8 @@ public class loginscreenPresenter implements loginscreenContract.Presenter{
     private loginscreenContract.Model model;
     private CatalogMediator mediator;
 
+    boolean comprueba;
+
     public loginscreenPresenter(CatalogMediator mediator){
         this.mediator =mediator;
         state = mediator.getLoginScreenState();
@@ -41,6 +43,7 @@ public class loginscreenPresenter implements loginscreenContract.Presenter{
     public void fetchLoginScreenData() {
         Log.e(TAG,"fetchLoginScreenData()");
         // TODO: add code if is necessary
+        /*
 
         model.fetchUsersListData_MODEL(new RepositoryContract.GetUsersListCallback() {
             @Override
@@ -49,6 +52,8 @@ public class loginscreenPresenter implements loginscreenContract.Presenter{
 
             }
         });
+
+         */
 
 
        // Log.e(TAG,"El tamaño de usarios son "+  state.Usuarios.size());
@@ -98,7 +103,7 @@ public class loginscreenPresenter implements loginscreenContract.Presenter{
 
     @Override
     public void login(String correo, String password){
-        boolean comprueba = model.verificarcredenciales(correo, password, new RepositoryContract.GetUsersListCallback() {
+        comprueba = model.verificarcredenciales(correo, password, new RepositoryContract.GetUsersListCallback() {
             @Override
             public void setUsersList(List<User> users) {
 

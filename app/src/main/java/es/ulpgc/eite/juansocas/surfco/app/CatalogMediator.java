@@ -2,6 +2,8 @@ package es.ulpgc.eite.juansocas.surfco.app;
 
 
 
+import es.ulpgc.eite.juansocas.surfco.catalogo.catalogoPicosPresenter;
+import es.ulpgc.eite.juansocas.surfco.catalogo.catalogoPicosState;
 import es.ulpgc.eite.juansocas.surfco.firstscreen.firstscreenState;
 import es.ulpgc.eite.juansocas.surfco.loginscreen.loginscreenState;
 import es.ulpgc.eite.juansocas.surfco.menuscreen.MenuScreenState;
@@ -18,6 +20,8 @@ public class CatalogMediator {
     private SingUpScreenState singUpScreenState = new SingUpScreenState();
 
     private MenuScreenState menuScreenState = new MenuScreenState();
+
+    private catalogoPicosState catalogoPicosState = new catalogoPicosState();
 
 
     private CatalogMediator() {
@@ -49,5 +53,9 @@ public class CatalogMediator {
 
     public SingUpScreenState getSingUpScreenState() {
         return singUpScreenState;
+    }
+
+    public catalogoPicosState getCatalogoPicosState(){
+        return  catalogoPicosState;
     }
 }

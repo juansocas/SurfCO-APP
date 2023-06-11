@@ -30,20 +30,9 @@ public interface UserDAO {
     List<User> getUsers();
 
 
-
-
-
-
-
-
-
 /*
-
     @Query("SELECT * FROM Usuarios INNER JOIN picos On user_id = picos.user_id WHERE picos.id = :picodd");
     List<User> getUserByPicoId(int picodd);
-
  */
-
-
 
 }

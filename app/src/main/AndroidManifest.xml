@@ -25,6 +25,7 @@
         <activity android:name=".loginscreen.loginscreenActivity"></activity>
         <activity android:name=".singupscreen.SingUpScreenActivity" />
         <activity android:name=".menuscreen.MenuScreenActivity"/>
+        <activity android:name=".catalogo.catalogoPicosActivity"/>
     </application>
 
 </manifest>

@@ -3,42 +3,55 @@ package es.ulpgc.eite.juansocas.surfco.loginscreen;
 import android.nfc.Tag;
 import android.util.Log;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import es.ulpgc.eite.juansocas.surfco.data.RepositoryContract;
+import es.ulpgc.eite.juansocas.surfco.data.SurfandCoRepository;
 import es.ulpgc.eite.juansocas.surfco.data.User;
+import es.ulpgc.eite.juansocas.surfco.database.SurfandCODatabase;
 
 public class loginscreenModel implements loginscreenContract.Model{
 
     public static String TAG = loginscreenModel.class.getSimpleName();
     private RepositoryContract repository;
     boolean verificacion;
+    List<User> usuarios = new ArrayList<>();
 
     public loginscreenModel(RepositoryContract repo) {
         this.repository = repo;
     }
 
     public boolean verificarcredenciales(String correo, String password, RepositoryContract.GetUsersListCallback callback){
-
+        //List<User> usuarios = new ArrayList<>();
 
         Log.e(TAG,correo);
         Log.e(TAG,password);
-        repository.getUsers(new RepositoryContract.OnUsergeted() {
+
+
+
+        ///TODO: FALLA, NO LO CONSIGO
+        // SEGURO QUE ES UNA GILIPOLLEZ
+
+
+        repository.getUsers1(new RepositoryContract.GetUsersListCallback() {
             @Override
-            public void onUsergeted(List<User> users) {
+            public void setUsersList(List<User> users) {
+                Log.e(TAG," pruebaaa   " + users.size());
+
                 callback.setUsersList(users);
 
-                for (int i = 0; i < users.size();i++){
-                    Log.e(TAG,"Usaurios: " + users.get(i).getEmail() +" " + users.get(i).getPassword());
-                    if (correo.equals(users.get(i).getEmail()) && password.equals(users.get(i).getPassword())){
-                        verificacion = true;
-                        break;
-                    }
 
+                repository.getUsersList(callback);
+                for(int i = 0; i<users.size(); i++){
+                    Log.e(TAG, "Esto es:  " + users.get(i).getNombre());
+                    usuarios.add(users.get(i));
                 }
-
             }
         });
+        Log.e(TAG," FInall  " + usuarios.size());
+
+
         return verificacion;
 
     }
@@ -61,6 +74,7 @@ public class loginscreenModel implements loginscreenContract.Model{
     public void fetchUsersListData_MODEL(final RepositoryContract.GetUsersListCallback callback){
 
         Log.e(TAG,"fetchUsersListData_MODEL()");
+
 
         repository.loadUsers(true, new RepositoryContract.FetchUsersDataCallback() {
             @Override

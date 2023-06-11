@@ -21,5 +21,27 @@ public class User_Picos {
 
     public int picoId;
 
+    public int getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
+    public int getPicoId() {
+        return picoId;
+    }
+
+    public void setPicoId(int picoId) {
+        this.picoId = picoId;
+    }
 }

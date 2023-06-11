@@ -2,6 +2,7 @@ package es.ulpgc.eite.juansocas.surfco.firstscreen;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -11,11 +12,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import es.ulpgc.eite.juansocas.surfco.R;
 import es.ulpgc.eite.juansocas.surfco.app.CatalogMediator;
 import es.ulpgc.eite.juansocas.surfco.loginscreen.loginscreenActivity;
+import es.ulpgc.eite.juansocas.surfco.loginscreen.loginscreenScreen;
 import es.ulpgc.eite.juansocas.surfco.singupscreen.SingUpScreenActivity;
 
 
 public class firstscreenActivity extends AppCompatActivity implements firstscreenContract.View {
 
+    private static String TAG = "SurfCO.firstscreenActivity";
 
     firstscreenContract.Presenter presenter;
     private  firstscreenAdapter listAdapter;
@@ -30,49 +33,23 @@ public class firstscreenActivity extends AppCompatActivity implements firstscree
         login_button1 = findViewById(R.id.login_button);
         singup_button1 = findViewById(R.id.singup_button);
 
-        //presenter.fetchFirstScreenData();
-
-
-
-
-
-
-        //Toolbar toolbar = findViewById(R.id.toolbar);
-/*
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null){
-            actionBar.setTitle("prueba");
-        }
-        listAdapter = new firstscreenAdapter(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-        //RecyclerView recyclerView = findViewById(R);
-        //recyclerView.setAdapter(listAdapter);
-
-        // do the setup
-        firstscreenScreen.configure(this);
-
-        // do some work
-        //presenter.fetchFirstScreendata();
-
-
-
- */
 
         if(savedInstanceState == null){
             CatalogMediator.resetInstance();
         }
         // do the setup
-        firstscreenScreen.configure(this);
+        firstscreenScreen.configure (this);
 
         if (savedInstanceState == null){
             presenter.onStart();
         } else{
             presenter.onRestart();
         }
+        Log.e(TAG,"pasa por aquiiiiii");
+
+        //CARGA EL JSON
+        presenter.fetchFirstScreenData();
+
 
     }
 

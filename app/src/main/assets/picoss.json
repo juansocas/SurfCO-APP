@@ -2,80 +2,77 @@
   "picoss": [
     {
       "id": 1,
-      "Nombre": "El Quemao",
-      "Imagen": "https://quemaoclass.com/wp-content/uploads/2022/12/QUEMAOCLASS7-141.jpg",
-      "Info": "El Quemao es una de las mejores y más peligrosas del Atlántico norte y rompe justo delante del pueblo marinero de La Santa.\n\n Aguanta swells de tres a cuatro metros y solo los mejores riders son capaces de surfearla pero es posible darse buenos baños hasta un metro si la fuerza es la adecuada. Esta ola es la joya de la corona de Lanzarote y desde hace unos años se realiza en ella un Campeonato con los mejores surfistas europeos en memoria de David \"El Fula\" que falleció surfeando en ella.\n\nPara entrar a surfear esta ola es recomendable estar en muy buena forma física y mental incluso días de poco mar. Sólamente surfistas con mucha experiencia pueden afrontar el take off vertical y meterse rápidamente en el tubo. Su fondo es de reef volcánico afilado y no hay más de un metro de profundidad. Es normal quedarse en seco remontando sobre todo en la segunda sección que produce un tubo muy hueco con un labio grueso capaz de romper tablas y costillas.",
-      "Isla": "Lanzarote"
+      "nombre": "El Quemao",
+      "imagen": "https://quemaoclass.com/wp-content/uploads/2022/12/QUEMAOCLASS7-141.jpg",
+      "info": "El Quemao es una de las mejores y más peligrosas del Atlántico norte y rompe justo delante del pueblo marinero de La Santa.\n\n Aguanta swells de tres a cuatro metros y solo los mejores riders son capaces de surfearla pero es posible darse buenos baños hasta un metro si la fuerza es la adecuada. Esta ola es la joya de la corona de Lanzarote y desde hace unos años se realiza en ella un Campeonato con los mejores surfistas europeos en memoria de David \"El Fula\" que falleció surfeando en ella.\n\nPara entrar a surfear esta ola es recomendable estar en muy buena forma física y mental incluso días de poco mar. Sólamente surfistas con mucha experiencia pueden afrontar el take off vertical y meterse rápidamente en el tubo. Su fondo es de reef volcánico afilado y no hay más de un metro de profundidad. Es normal quedarse en seco remontando sobre todo en la segunda sección que produce un tubo muy hueco con un labio grueso capaz de romper tablas y costillas.",
+      "isla": "Lanzarote"
     },
     {
       "id": 2,
-      "Nombre": "Playa de Famara",
-      "Imagen": "https://www.surfmarket.org/es/?option=com_mtree&task=att_download&link_id=229&cf_id=23",
-      "Info": "La mejor playa de Lanzarote para surfear y donde se pueden encontrar muchas olas para todos los niveles. Puedes aparcar delante de las olas y disfrutar del surfing entrando y saliendo por arena.\n\nLa mayoría de las olas de Lanzarote tienen un acceso complicado caminando por rocas, por eso agradecerás los baños en Famara.\nSe surfea con media marea y marea llena. Con marea baja suele cerrar pero depende de los fondos. Los días de calima suele dar buenos tubos. Un lugar ideal para pasar unos meses en invierno.",
-      "Isla": "Lanzarote"
+      "nombre": "Playa de Famara",
+      "imagen": "https://www.surfmarket.org/es/?option=com_mtree&task=att_download&link_id=229&cf_id=23",
+      "info": "La mejor playa de Lanzarote para surfear y donde se pueden encontrar muchas olas para todos los niveles. Puedes aparcar delante de las olas y disfrutar del surfing entrando y saliendo por arena.\n\nLa mayoría de las olas de Lanzarote tienen un acceso complicado caminando por rocas, por eso agradecerás los baños en Famara.\nSe surfea con media marea y marea llena. Con marea baja suele cerrar pero depende de los fondos. Los días de calima suele dar buenos tubos. Un lugar ideal para pasar unos meses en invierno.",
+      "isla": "Lanzarote"
     },
     {
       "id": 3,
-      "Nombre": "La Gedionda",
-      "Imagen": "https://www.surfmarket.org/es/?option=com_mtree&task=att_download&link_id=208&cf_id=23",
-      "Info": "Buena Izquierda con marea baja. Es una ola muy larga y muy buena. Es necesario tener un buen nivel en izquierdas.\n\nSuele haber entre 10 y 20 riders en el agua un día con olas en la Costa Norte.",
-      "Isla": "Lanzarote"
+      "nombre": "La Gedionda",
+      "imagen": "https://www.surfmarket.org/es/?option=com_mtree&task=att_download&link_id=208&cf_id=23",
+      "info": "Buena Izquierda con marea baja. Es una ola muy larga y muy buena. Es necesario tener un buen nivel en izquierdas.\n\nSuele haber entre 10 y 20 riders en el agua un día con olas en la Costa Norte.",
+      "isla": "Lanzarote"
     },
     {
       "id": 4,
-      "Nombre": "Bubbles",
-      "Imagen": "https://www.surfmarket.org/es/?option=com_mtree&task=att_download&link_id=309&cf_id=23",
-      "Info": "Bubbles es una de las olas más famosas del norte de Fuerteventura, se ubica en Majanicho al oeste de Corralejo. Se trata de una derecha corta pero muy potente, con un buen swell puede producir grandes tubos. Sin duda alguna, es una de las mejores olas de la isla, solamente es apta para surferos experimentados en olas de roca y con capacidad de entubar y escapar.\n\nLa ola tiene muy poco fondo y es muy explosiva multiplicando su tamaño en muy pocos segundos. Es una de las olas más surfeadas de la isla y siempre hay gente esperando el punto bueno de marea para entrar en el agua.",
-      "Isla": "Fuerteventura"
+      "nombre": "Bubbles",
+      "imagen": "https://www.surfmarket.org/es/?option=com_mtree&task=att_download&link_id=309&cf_id=23",
+      "info": "Bubbles es una de las olas más famosas del norte de Fuerteventura, se ubica en Majanicho al oeste de Corralejo. Se trata de una derecha corta pero muy potente, con un buen swell puede producir grandes tubos. Sin duda alguna, es una de las mejores olas de la isla, solamente es apta para surferos experimentados en olas de roca y con capacidad de entubar y escapar.\n\nLa ola tiene muy poco fondo y es muy explosiva multiplicando su tamaño en muy pocos segundos. Es una de las olas más surfeadas de la isla y siempre hay gente esperando el punto bueno de marea para entrar en el agua.",
+      "isla": "Fuerteventura"
     },
     {
       "id": 5,
-      "Nombre": "Derecha de los Alemanes",
-      "Imagen": "https://www.surfmarket.org/media/com_mtree/images/listings/m/543.jpg",
-      "Info": "La derecha de los alemanes se ubica en el norte de la isla, rompe al lado de la izquierda del Hierro, es una de las olas más famosas de la zona. Se trata de una rompiente clásica, de nivel medio, tiene fácil acceso a través de un canal y playa delante de la ola para pasar el día a gusto. La ola es una derecha rápida con una sección de tubo arriba y luego otra buena sección en la parte baja donde se vuelve a poner.\n\nEsta ola no es para principiantes pero admite surfistas de nivel medio. Si no sabes bien surfear sobre lava es conveniente que te mantengas en el canal y la segunda sección para evitar sustos. Se puede aparcar justo delante de la ola.",
-      "Isla": "Fuerteventura"
+      "nombre": "Derecha de los Alemanes",
+      "imagen": "https://www.surfmarket.org/media/com_mtree/images/listings/m/543.jpg",
+      "info": "La derecha de los alemanes se ubica en el norte de la isla, rompe al lado de la izquierda del Hierro, es una de las olas más famosas de la zona. Se trata de una rompiente clásica, de nivel medio, tiene fácil acceso a través de un canal y playa delante de la ola para pasar el día a gusto. La ola es una derecha rápida con una sección de tubo arriba y luego otra buena sección en la parte baja donde se vuelve a poner.\n\nEsta ola no es para principiantes pero admite surfistas de nivel medio. Si no sabes bien surfear sobre lava es conveniente que te mantengas en el canal y la segunda sección para evitar sustos. Se puede aparcar justo delante de la ola.",
+      "isla": "Fuerteventura"
     },
     {
       "id": 6,
-      "Nombre": "El Cofete",
-      "Imagen": "https://exploraplaya.es/wp-content/uploads/2021/12/Cofete-Fuerteventura-Surf.jpg",
-      "Info": "Cofete es una playa del sur de Fuerteventura, pertenece al municipio Pájara es una arenal inmenso de 14 kilómetros de longitud, siendo uno de los principales atractivos de la península de Jandía. En cuanto a las olas y el surf, no es un sitio muy frecuentado por los surfistas, es una ubicación con muchísimo viento y esto es perjudicial para las olas. En algunas ocasiones cuando el viento lo permite y los fondos están bien posicionados, puedes encontrar un baño divertido con olas de izquierda y derecha.\n\nCofete merece ser visitada, a pesar de ser bastante famoso, mantiene su estado virgen y como se puede observar en las imágenes de la galería, el paisaje es todo natural. Tiene zonas de aparcamiento pero carece de servicios, la mayoría de carreteras para acceder están sin asfaltar.",
-      "Isla": "Fuerteventura"
+      "nombre": "El Cofete",
+      "imagen": "https://exploraplaya.es/wp-content/uploads/2021/12/Cofete-Fuerteventura-Surf.jpg",
+      "info": "Cofete es una playa del sur de Fuerteventura, pertenece al municipio Pájara es una arenal inmenso de 14 kilómetros de longitud, siendo uno de los principales atractivos de la península de Jandía. En cuanto a las olas y el surf, no es un sitio muy frecuentado por los surfistas, es una ubicación con muchísimo viento y esto es perjudicial para las olas. En algunas ocasiones cuando el viento lo permite y los fondos están bien posicionados, puedes encontrar un baño divertido con olas de izquierda y derecha.\n\nCofete merece ser visitada, a pesar de ser bastante famoso, mantiene su estado virgen y como se puede observar en las imágenes de la galería, el paisaje es todo natural. Tiene zonas de aparcamiento pero carece de servicios, la mayoría de carreteras para acceder están sin asfaltar.",
+      "isla": "Fuerteventura"
     },{
       "id": 7,
-      "Nombre": "La Cicer",
-      "Imagen": "https://www.grancanariaregional.com/wp-content/uploads/2016/03/El-Cicer-day-view.jpg",
-      "Info": "La Cícer es la playa principal de Las Palmas de Gran Canaria. Es una playa muy buena para aprender a surfear y coger soltura con las olas. El arenal tiene tres kilometros de largo y cuenta con múltiples picos muy masificados. Es importante ser muy respetuoso en el agua y seguir el código de respeto debido al fuerte localismo. Hay picos para todos los niveles debes asegurarte de estar en el sitio que se corresponda con tu nivel.",
-      "Isla": "Gran Canaria"
+      "nombre": "La Cicer",
+      "imagen": "https://www.grancanariaregional.com/wp-content/uploads/2016/03/El-Cicer-day-view.jpg",
+      "info": "La Cícer es la playa principal de Las Palmas de Gran Canaria. Es una playa muy buena para aprender a surfear y coger soltura con las olas. El arenal tiene tres kilometros de largo y cuenta con múltiples picos muy masificados. Es importante ser muy respetuoso en el agua y seguir el código de respeto debido al fuerte localismo. Hay picos para todos los niveles debes asegurarte de estar en el sitio que se corresponda con tu nivel.",
+      "isla": "Gran Canaria"
     },
     {
       "id": 8,
-      "Nombre": "Faro de Maspalomas",
-      "Imagen": "https://www.surfmarket.org/es/?option=com_mtree&task=att_download&link_id=542&cf_id=23",
-      "Info": "En el sur de Gran Canaria se encuentra Maspalomas, una de las zonas más turísticas de la isla. Maspalomas es conocido por sus dunas, buen tiempo y los grandes hoteles, no es un sitio frecuentado por sus olas. En Gran Canaria los oleajes predominantes del norte rara vez llegan al sur de la isla, por lo que no es un sitio de olas consistentes. Para tener buenas olas en el Faro de Maspalomas hace falta oleaje del sur, una dirección menos habitual. Sin embargo, cuando se cumplen estas condiciones las olas tienen buena calidad, con viento offshore te puedes sorprender y coger olas increíbles.\n\nLas olas están repartidas a lo largo de todo la playa y rompen sobre fondo de arena y rocas. Cuando hay buenas condiciones se masifica, dependiendo del día las olas pueden ser aptas para todos los niveles, aunque si eres principiante no te acerques a los principales picos.",
-      "Isla": "Gran Canaria"
+      "nombre": "Faro de Maspalomas",
+      "imagen": "https://www.surfmarket.org/es/?option=com_mtree&task=att_download&link_id=542&cf_id=23",
+      "info": "En el sur de Gran Canaria se encuentra Maspalomas, una de las zonas más turísticas de la isla. Maspalomas es conocido por sus dunas, buen tiempo y los grandes hoteles, no es un sitio frecuentado por sus olas. En Gran Canaria los oleajes predominantes del norte rara vez llegan al sur de la isla, por lo que no es un sitio de olas consistentes. Para tener buenas olas en el Faro de Maspalomas hace falta oleaje del sur, una dirección menos habitual. Sin embargo, cuando se cumplen estas condiciones las olas tienen buena calidad, con viento offshore te puedes sorprender y coger olas increíbles.\n\nLas olas están repartidas a lo largo de todo la playa y rompen sobre fondo de arena y rocas. Cuando hay buenas condiciones se masifica, dependiendo del día las olas pueden ser aptas para todos los niveles, aunque si eres principiante no te acerques a los principales picos.",
+      "isla": "Gran Canaria"
     },
     {
       "id": 9,
-      "Nombre": "Punta Blanca",
-      "Imagen": "https://www.surfmarket.org/es/?option=com_mtree&task=att_download&link_id=1012&cf_id=23",
-      "Info": "Punta Blanca, también conocida como K16, está ubicada en la costa oeste de Tenerife, es una de las mejores olas de Canarias. Se trata de un pico de arrecife rocoso que ofrece secciones huecas muy intensas y peligrosas. Aunque las olas son tanto de izquierda como de derecha, la izquierda es la preferida por su calidad y recorrido. Esta ola es apta solo para surfistas y bodyboarders experimentados, ya que se requiere habilidad para bajar y entubar en olas rápidas y verticales. El fondo de roca volcánica se encuentra muy cerca de la superficie y con la marea baja el margen de error es mínimo.\n\nLa mejor época para surfear es durante los meses de invierno, cuando los oleajes del noroeste son más consistentes. Idealmente, se necesita una leve brisa del este o nada de viento para disfrutar de las mejores condiciones. Cuando se cumplen estas condiciones, muchos locales acuden a Punta Blanca, por lo que es fundamental ser respetuoso en el agua y tomar medidas de seguridad adecuadas.",
-      "Isla": "Tenerife"
+      "nombre": "Punta Blanca",
+      "imagen": "https://www.surfmarket.org/es/?option=com_mtree&task=att_download&link_id=1012&cf_id=23",
+      "info": "Punta Blanca, también conocida como K16, está ubicada en la costa oeste de Tenerife, es una de las mejores olas de Canarias. Se trata de un pico de arrecife rocoso que ofrece secciones huecas muy intensas y peligrosas. Aunque las olas son tanto de izquierda como de derecha, la izquierda es la preferida por su calidad y recorrido. Esta ola es apta solo para surfistas y bodyboarders experimentados, ya que se requiere habilidad para bajar y entubar en olas rápidas y verticales. El fondo de roca volcánica se encuentra muy cerca de la superficie y con la marea baja el margen de error es mínimo.\n\nLa mejor época para surfear es durante los meses de invierno, cuando los oleajes del noroeste son más consistentes. Idealmente, se necesita una leve brisa del este o nada de viento para disfrutar de las mejores condiciones. Cuando se cumplen estas condiciones, muchos locales acuden a Punta Blanca, por lo que es fundamental ser respetuoso en el agua y tomar medidas de seguridad adecuadas.",
+      "isla": "Tenerife"
     },{
       "id": 10,
-      "Nombre": "Las Palmeras",
-      "Imagen": "https://www.holaislascanarias.com/sites/default/files/styles/masonry_image/public/resources/resource_image/izquierda_palmeras__surf_01-gal.jpg?itok=Q7263_4F",
-      "Info": "Las Palmeras o Spanish Left es probablemente la ola más famosa de Tenerife y se encuentra en el suroeste de la isla, en pleno corazón de la playa de Las Américas. Es una de las mejores olas de Europa, con secciones largas y perfectas que recorren casi 100 metros. El fondo de roca volcánica acompañado de un oleaje consistente, produce tubos rápidos e intensos que enamoran a cualquier surfista goofy. Es una ola apta para surfistas con experiencia en olas de roca y habilidad para bajar y correr olas rápidas. La mejor época para surfear en esta rompiente es de octubre a marzo.\n\nLa calidad de Las Palmeras ha logrado posicionar a Tenerife en el panorama internacional, con la celebración exitosa de campeonatos de mucho reconocimiento. Es una ola bastante masificada, por lo que se recomienda ser paciente en el agua y respetar a los locales. Muchos surfistas se posicionan lejos de la zona principal de takeoff y aprovechan las olas que se escapan vacías.",
-      "Isla": "Tenerife"
+      "nombre": "Las Palmeras",
+      "imagen": "https://www.holaislascanarias.com/sites/default/files/styles/masonry_image/public/resources/resource_image/izquierda_palmeras__surf_01-gal.jpg?itok=Q7263_4F",
+      "info": "Las Palmeras o Spanish Left es probablemente la ola más famosa de Tenerife y se encuentra en el suroeste de la isla, en pleno corazón de la playa de Las Américas. Es una de las mejores olas de Europa, con secciones largas y perfectas que recorren casi 100 metros. El fondo de roca volcánica acompañado de un oleaje consistente, produce tubos rápidos e intensos que enamoran a cualquier surfista goofy. Es una ola apta para surfistas con experiencia en olas de roca y habilidad para bajar y correr olas rápidas. La mejor época para surfear en esta rompiente es de octubre a marzo.\n\nLa calidad de Las Palmeras ha logrado posicionar a Tenerife en el panorama internacional, con la celebración exitosa de campeonatos de mucho reconocimiento. Es una ola bastante masificada, por lo que se recomienda ser paciente en el agua y respetar a los locales. Muchos surfistas se posicionan lejos de la zona principal de takeoff y aprovechan las olas que se escapan vacías.",
+      "isla": "Tenerife"
     },{
       "id": 11,
-      "Nombre": "Playa de La Garita",
-      "Imagen": "https://lanzasurf.com/wp-content/uploads/2022/03/garita-surf-spot-Lanzarote.jpg",
-      "Info": "",
-      "Isla": "Lanzarote"
+      "nombre": "Playa de La Garita",
+      "imagen": "https://lanzasurf.com/wp-content/uploads/2022/03/garita-surf-spot-Lanzarote.jpg",
+      "info": "",
+      "isla": "Lanzarote"
     }
-
-
-
   ]
 }

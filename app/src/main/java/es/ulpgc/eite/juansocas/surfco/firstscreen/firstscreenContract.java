@@ -4,6 +4,8 @@ import android.view.View;
 
 import java.lang.ref.WeakReference;
 
+import es.ulpgc.eite.juansocas.surfco.data.RepositoryContract;
+
 public interface firstscreenContract {
     interface View{
         void injectPresenter(Presenter presenter);
@@ -23,6 +25,9 @@ public interface firstscreenContract {
 
     }
     interface Model{
+        void fetchTODODATA_Model(RepositoryContract.GetUsersListCallback callback, RepositoryContract.GetPicosListCallback callback2, RepositoryContract.GetTABLAIntermediaListCallback callback3);
+
+        void  fetchPicos_Model(RepositoryContract.GetPicosListCallback callbackPicos);
         //void fetchFirstScreenData();
 
     }

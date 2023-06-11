@@ -54,7 +54,7 @@ public class loginscreenActivity extends AppCompatActivity implements loginscree
 
 
         //CARGA EL JSON
-        presenter.fetchLoginScreenData();
+        //presenter.fetchLoginScreenData();
 
         //INSERTAR MANUELMENTE UN USER
         //presenter.insertarUSER_PRESENTER();
@@ -69,6 +69,7 @@ public class loginscreenActivity extends AppCompatActivity implements loginscree
                     correo = correo_introducida.getText().toString();
                     password = password_introducida.getText().toString();
                     //VERIFICAMOS SI ESTAN DENTRO DE LA BD
+                    //navigateToMenuScreen(view);
                     presenter.login(correo, password);
                 }catch (Exception e){
                     Toast.makeText(loginscreenActivity.this,"error",Toast.LENGTH_LONG).show();
